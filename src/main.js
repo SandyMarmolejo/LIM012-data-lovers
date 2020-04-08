@@ -111,3 +111,18 @@ btnMostrarMedallas.addEventListener('click', () => {
     document.getElementById('rootMedallas').innerHTML = 'Por favor seleccione una Olimpiada y un pais';
   }
 });
+
+const opcionMenu = document.querySelectorAll('th');
+optionsMenu.forEach((liMenu) => {
+  liMenu.addEventListener('click', (event) => {
+    //document.getElementById('table').classList.remove('borrar');
+    //const athletes = athletesView(arrAtletas);
+    if (event.target.id === '3') {
+      //document.getElementById('root').innerHTML = '';
+      //document.getElementById('articulos').classList.add('borrar');
+
+  });
+});
+  
+    
+    
