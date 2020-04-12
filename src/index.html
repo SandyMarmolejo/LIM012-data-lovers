@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
@@ -16,10 +15,10 @@
         <div class="logo">
           <a href="index.html">Olympic History</a>
         </div>
-        <nav>
-          <ul class="menu">
-            <li class="liMenu"><a href="#"><span id="1" class="off">Conoce a los atletas</span></a></li>
-            <a href="#"><span id="medallas" class="off">Medallero</span></a>
+        <nav class="menu">
+          <ul class="ulAtletas">
+            <li class="ulAtletas"><a href="#"><span id="1" class="off">Conoce a los atletas</span></a></li>
+            <a href="#" id="medallas" class="aMedallero">Medallero</a>
           </ul>
         </nav>
         <div class="social"></div>
@@ -34,10 +33,7 @@
     <main>
       <section id="table" class="main-container borrar">
         <table>
-          <button id="btn" class="btn">Ordenar</button>
-          <select>
-            <option value="">A-Z</option>
-          </select>
+          <button id="btn" class="btnOrdenar">Ordenar A-Z</button>
           <th>NOMBRE</th>
           <th>EQUIPO</th>
           <th>DEPORTE</th>
