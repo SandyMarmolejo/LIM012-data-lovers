@@ -1,6 +1,3 @@
-/* eslint-disable max-len */
-// Las funciones son acciones y las acciones son verbos!
-// Cual es el nombre de la funcion: el tipo de dato de sus parmetros y lo que retorna
 export const athletesView = (array) => {
   const newArray = array.map(obj => ({
     nombre: obj.nombre,
@@ -35,46 +32,3 @@ export const totalMedallas = (arrayAtletas, pais, olimpiada, tipo) => {
   }, 0);
   return totalMedallasTipo;
 };
-
-/* export const totalMedallasOro = (arrayAtletas, pais, olimpiada) => {
-  const arrayAtletasPorPais = arrayAtletas.filter(atleta => atleta.equipo === pais);
-  const totalMedallasGold = arrayAtletasPorPais.reduce((contador, atleta) => {
-    const atletaConMedallaGold = atleta.disciplinas.filter(c => c.ciudad === olimpiada && c.medalla === 'Gold');
-
-    if (atletaConMedallaGold.length > 0) {
-      return contador + 1;
-    }
-    return contador;
-  }, 0);
-
-  return totalMedallasGold;
-};
-
-export const totalMedallasPlata = (arrayAtletas, pais, olimpiada) => {
-  const arrayAtletasPorPais = arrayAtletas.filter(atleta => atleta.equipo === pais);
-  const totalMedallasSilver = arrayAtletasPorPais.reduce((contador, atleta) => {
-    const atletaConMedallaSilver = atleta.disciplinas.filter(c => c.ciudad === olimpiada && c.medalla === 'Silver');
-
-    if (atletaConMedallaSilver.length > 0) {
-      return contador + 1;
-    }
-    return contador;
-  }, 0);
-
-  return totalMedallasSilver;
-};
-
-export const totalMedallasBronce = (arrayAtletas, pais, olimpiada) => {
-  const arrayAtletasPorPais = arrayAtletas.filter(atleta => atleta.equipo === pais);
-  const totalMedallasBronze = arrayAtletasPorPais.reduce((contador, atleta) => {
-    const atletaConMedallaBronze = atleta.disciplinas.filter(c => c.ciudad === olimpiada && c.medalla === 'Bronze');
-
-    if (atletaConMedallaBronze.length > 0) {
-      return contador + 1;
-    }
-    return contador;
-  }, 0);
-
-  return totalMedallasBronze;
-};
-*/

@@ -113,17 +113,3 @@ optionsMedallas.addEventListener('click', () => {
       + `Bronce ${medallasBronce}`;
   });
 });
-
-/*
-
-  btnMostrarMedallas.addEventListener('click', () => {
-    const medallasOro = totalMedallasOro(arrAtletas, paisSelec, ciudadSelec);
-    const medallasPlata = totalMedallasPlata(arrAtletas, paisSelec, ciudadSelec);
-    const medallasBronce = totalMedallasBronce(arrAtletas, paisSelec, ciudadSelec);
-
-    document.getElementById('rootMedallas').innerHTML = `Oro ${medallasOro} `
-      + `Plata ${medallasPlata} `
-      + `Bronce ${medallasBronce}`;
-  });
-});
-*/
