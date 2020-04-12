@@ -46,7 +46,6 @@ table{
       background-color: #142850;
       padding: 0%;
 }
-
    .btnOrdenar{
     margin-left: 75%;
     color: #fff;
@@ -56,7 +55,6 @@ table{
     th{
     padding: 20px;
     }
-
     
   ul:nth-child(even){
     padding: 10px;
@@ -65,7 +63,6 @@ table{
     flex-flow: row nowrap;  
     text-align: center;
   }
-
   li{
     padding: 10px;
     flex-flow: row nowrap;  
@@ -79,7 +76,6 @@ table{
     display: flex;
     text-align: center;
    } 
-
 .seccion-medallas  {
   position: relative;
   margin-left: 30%;
@@ -100,7 +96,7 @@ table{
       background-color: #142850;
       padding: 8px;
     }
-
+ 
     .btnmedallas{
     margin-top: 5%;
     margin-left: 38%;
@@ -227,7 +223,6 @@ table{
                 padding: 0 10px;
                 letter-spacing: 2px;
             }
-
         .aside{
             flex: 1 1 auto;
             margin: 10px 5px 10px 0;
@@ -279,7 +274,6 @@ table{
         height: 450px;
     }
 }
-
 @media all and (max-width: 762px){
     .articulos{
         flex-direction: column;
@@ -309,7 +303,6 @@ table{
         padding: 3%;
     }
 }
-
 /*Tabla de atletas*/
 @media screen and (max-width: 1006px) {
     table {
@@ -369,7 +362,6 @@ table{
             padding: 14px;
         }
     }
-
 @media screen and (max-width: 756px) {
     table {
     width: 100%;
@@ -431,7 +423,6 @@ table{
         padding: 5px;
     }
 }
-
 @media screen and (max-width: 360px) {
     table {
     width: 100%;
@@ -512,7 +503,6 @@ table{
         font-size: 11px;
     }
 }
-
 @media screen and (max-width: 320px) {
     table {
     width: 100%;
