@@ -1,6 +1,7 @@
+/* eslint-disable */
 import {
-  athletesView, ordenAs, filtrarAtletasPorDeporte, totalMedallas,
-} from '../src/data.js';
+  getAthletesMinView, sortByName, filterBySport, totalMedallas,
+} from '../src/js/data.js';
 
 const input = [
   {
@@ -102,35 +103,39 @@ const medallero = [
   },
 ];
 
-describe('athletesView', () => {
+describe('getAthletesMinView', () => {
   it('is a function', () => {
-    expect(typeof athletesView).toBe('function');
+    expect(typeof getAthletesMinView).toBe('function');
   });
-  it('Deberia retornar un array con las propiedades: nombre, equipo, noc', () => {
+  it('Deberia retornar un array con las propiedades: nombre, deporte, equipo, genero', () => {
     const output = [
       {
         nombre: 'Matteo Bisiani',
         deporte: 'Archery',
         equipo: 'Italy',
+        genero: 'M'
       },
       {
         nombre: 'Nataliya Andrivna Burdeina',
         deporte: 'Archery',
         equipo: 'Ukraine',
+        genero: 'F'
       },
       {
         nombre: 'Ilario Di Bu',
         deporte: 'Swing',
         equipo: 'Italy',
+        genero: 'M'
       },
     ];
-    expect(athletesView(input)).toEqual(output);
+
+    expect(getAthletesMinView(input,'','','','','')).toEqual(output);
   });
 });
 
-describe('ordenAs', () => {
+describe('sortByName', () => {
   it('is a function', () => {
-    expect(typeof ordenAs).toBe('function');
+    expect(typeof sortByName).toBe('function');
   });
 
   it('Deberia retornar un array ordenado alfabeticamente a partir de la propiedad nombre', () => {
@@ -166,13 +171,14 @@ describe('ordenAs', () => {
         noc: 'UKR',
       },
     ];
-    expect(ordenAs(input)).toEqual(twoOutput);
+
+    expect(sortByName(input, 'asc')).toEqual(twoOutput);
   });
 });
 
-describe('filtrarAtletasPorDeporte', () => {
+describe('filterBySport', () => {
   it('is a function', () => {
-    expect(typeof filtrarAtletasPorDeporte).toBe('function');
+    expect(typeof filterBySport).toBe('function');
   });
 
   it('Deberia retornar un array con objetos tengan el mismo tipo de deporte', () => {
@@ -196,19 +202,9 @@ describe('filtrarAtletasPorDeporte', () => {
         deporte: 'Archery',
         equipo: 'Ukraine',
         noc: 'UKR',
-      },
+      }
     ];
-    expect(filtrarAtletasPorDeporte(input, 'Archery')).toEqual(threeOutput);
-  });
-});
 
-describe('totalMedallas', () => {
-  it('is a function', () => {
-    expect(typeof totalMedallas).toBe('function');
-  });
-
-  it('Deberia retornar un numero unico con la cantidad de medallas', () => {
-    const resultado = 2;
-    expect(totalMedallas(medallero, 'Italy', 'Sydney', 'Silver')).toEqual(resultado);
+    expect(filterBySport(input, 'Archery')).toEqual(threeOutput);
   });
 });

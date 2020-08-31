@@ -1,125 +1,133 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="style.css" />
+  <title>Olimpiadas 2020 - Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- <link rel="stylesheet" href="css/style.css" /> -->
 </head>
- 
+
 <body>
-  <div class="padre">
-    <header class="header">
-      <div class="menu margen-interno">
-        <div class="logo">
-          <a href="index.html">Olympic History</a>
+  <header id="banner">
+  </header>
+  <section id="two" class="wrapper style1 special">
+    <div class="inner">
+      <header>
+        <input type="button" class="button btnMenu" id="btnAthletes" value="Conoce a los atletas" />
+        <input type="button" class="button btnMenu" id="btnMedals" value="Consulta las medallas" />
+      </header>
+      <div id="divMedals" class="hide">
+        <div id="divMedalsSearch" class="row uniform">
+          <div class="3u 12u$(xsmall)">
+            <div class="select-wrapper">
+              <select id="ddlCountryMedals">
+                <option value="">- Busca por país -</option>
+              </select>
+            </div>
+          </div>
+          <div class="3u 12u$(xsmall)">
+            <div class="select-wrapper">
+              <select id="ddlSportMedals">
+                <option value="">- Busca por deporte -</option>
+              </select>
+            </div>
+          </div>
+          <div class="3u 12u$(xsmall)">
+            <div class="select-wrapper">
+              <select id="ddlSortMedals">
+                <option value="">- Ordenar por -</option>
+                <option value="desc">Mayor número de medallas</option>
+                <option value="asc">Menor número de medallas</option>
+              </select>
+            </div>
+          </div>
+          <div class="3u 12u$(xsmall)">
+            <input type="button" class="button btnSearch" value="Buscar" id="btnSearchMedals" />
+          </div>
         </div>
-        <nav class="menu">
-          <ul class="ulAtletas">
-            <li class="ulAtletas"><a href="#"><span id="1" class="off">Conoce a los atletas</span></a></li>
-            <a href="#" id="medallas" class="aMedallero">Medallero</a>
-          </ul>
-        </nav>
-        <div class="social"></div>
-      </div>
-      <div class="texto-principal margen-interno">
-        <h1>Los Juegos Olímpicos son el mayor evento deportivo internacional del mundo, en el que compiten atletas
-          representantes de prácticamente todos los países existentes (alrededor de unos 200 en total), a lo largo de
-          varios días de un evento multidisciplinario organizado cada cuatro años. Se trata de uno de los eventos
-          deportivos más televisados y célebres de la contemporaneidad.</h1>
-      </div>
-    </header>
-    <main>
-      <section id="table" class="main-container borrar">
-        <table>
-          <button id="btn" class="btnOrdenar">Ordenar A-Z</button>
-          <th>NOMBRE</th>
-          <th>EQUIPO</th>
-          <th>DEPORTE</th>
-            <select class="optionSports" id="optionSports">
-              <option value="">Filtrar por Deporte</option>
-              <option value="Archery">Archery</option>
-              <option value="Athletics">Athletics</option>
-              <option value="Badminton">Badminton</option>
-              <option value="Baseball">Baseball</option>
-            </select>
-        </table>
-        <div id="root"></div>
-      </section>
-      <section id ="seccion-medallas" class="seccion-medallas borrar">
-        <select id="opcionOlimpiadas" class="opcOlimpiadas">
-          <option data-ciudad="" data-anno="">Seleccione una Olimpiada</option>
-          <option data-ciudad="Rio de Janeiro">Rio de Janeiro 2016</option>
-          <option data-ciudad="Sochi">Sochi 2014</option>
-          <option data-ciudad="London">London 2012</option>
-          <option data-ciudad="Vancouver">Vancouver 2010</option>
-          <option data-ciudad="Beijing">Beijing 2008</option>
-          <option data-ciudad="Torino">Torino 2006</option>
-          <option data-ciudad="Athina">Athina 2004</option>
-          <option data-ciudad="Salt Lake City">Salt Lake City 2002</option>
-          <option data-ciudad="Sydney">Sydney 2000</option>
-        </select>
-        <select id="opcionPais" class="opcOlimpiadas">
-          <option data-pais="">Seleccione un País</option>
-          <option data-pais="Italy">Italia</option>
-          <option data-pais="Mexico">Mexico</option>
-          <option data-pais="Australia">Australia</option>
-        </select>
-        <input type="button" name="btnMostrarMedallas" id="btnMostrarMedallas" class=" btnmedallas" value="Mostrar Medallas"/>
-        <div id="rootMedallas"></div>
-      </section>
-      <section id="articulos" class="section margen-interno">
-        <div class="articulos">
-          <article class="article">
-            <img src="Imagenes/correr.jpg">
-            <h3>MARZO 2020</h3>
-            <h2>TOP ATLETISMO</h2>
-            <a href="#">Ver más</a>
-          </article>
-          <article class="article">
-            <img src="Imagenes/judo.jpg">
-            <h3>MARZO 2020</h3>
-            <h2>TOP JUDO</h2>
-            <a href="#">Ver más</a>
-          </article>
-          <article class="article">
-            <img src="Imagenes/images.jpg">
-            <h3>MARZO 2020</h3>
-            <h2>TOP GIMNASIA</h2>
-            <a href="#">Ver más</a>
-          </article>
-          <article class="article">
-            <img src="Imagenes/karate.jpg">
-            <h3>MARZO 2020</h3>
-            <h2>TOP KARATE</h2>
-            <a href="#">Ver más</a>
-          </article>
-          <nav class="navegacion"></nav>
+        <div id="divMedalsList">
+          <table class="alt">
+            <thead>
+              <tr>
+                <th>Country</th>
+                <th>Bronze</th>
+                <th>Silver</th>
+                <th>Gold</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="tbMedals">
+            </tbody>
+          </table>
         </div>
-        <aside class="aside">
-          <div class="publicidad">
-            <h4>Noticias</h4>
-            <img src="Imagenes/tyty.jpg">
+      </div>
+      <div id="divAthletes" class="hide">
+        <div id="divAthletesSearch" class="row uniform">
+          <div class="4u 12u$(xsmall)">
+            <input type="text" id="txtSearch" value="" placeholder="Busca tu atleta por nombre">
           </div>
-          <div class="publicidad">
-            <h4>Documentales</h4>
-            <img src="Imagenes/6y6y65y.jpg">
+          <div class="4u 12u$(xsmall)">
+            <div class="select-wrapper">
+              <select id="ddlCountry">
+                <option value="">- Busca por país -</option>
+              </select>
+            </div>
           </div>
-          <div class="publicidad">
-            <h4>Comunicados de Prensa</h4>
-            <img src="Imagenes/6y6y65y.jpg">
+          <div class="4u 12u$(xsmall)">
+            <div class="select-wrapper">
+              <select id="ddlSport">
+                <option value="">- Busca por deporte -</option>
+              </select>
+            </div>
           </div>
-        </aside>
-      </section>
-    </main>
-    <footer class="footer margen-interno">
-      <nav class="pie">
-        <a href="#"> © Copyright 2020 | By Carmen & Sandy </a>
-      </nav>
-    </footer>
-  </div>
-  <script src="main.js" type="module"></script>
+          <div class="4u 12u$(xsmall)">
+            <div class="select-wrapper">
+              <select id="ddlMedal">
+                <option value="">- Busca por medalla -</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+              </select>
+            </div>
+          </div>
+          <div class="4u 12u$(xsmall)">
+            <div class="select-wrapper">
+              <select id="ddlSort">
+                <option value="">- Ordenar por -</option>
+                <option value="asc">Nombre ascendente</option>
+                <option value="desc">Nombre descendente</option>
+              </select>
+            </div>
+          </div>
+          <div class="4u 12u$(xsmall)">
+            <input type="button" class="button btnSearch" value="Buscar" id="btnSearchAthlete" />
+          </div>
+        </div>
+        <div id="divAthletesList" class="flex flex-4">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="inner">
+      <div class="flex">
+        <div class="copyright">
+          <h2> Desarrollado por <a href="https://github.com/SandyMarmolejo" target="_blank"> Sandy Marmolejo</a>
+          </h2>
+        </div>
+        <ul class="icons">
+          <li><a href="https://github.com/SandyMarmolejo" target="_blank" class="icon brands fa-github alt"><span
+                class="label">GitHub</span></a></li>
+          <li><a href="https://www.linkedin.com/in/sandy-marmolejo/" target="_blank"
+              class="icon brands fa-linkedin alt"><span class="label">Linkedin</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" type="module"></script>
 </body>
- 
+
 </html>

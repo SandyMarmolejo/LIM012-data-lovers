@@ -87,34 +87,24 @@ OLYMPIC HISTORY- Contiene un apartado denominado "Medallero", a traves del cual,
   A continuacion los prototipos de baja realizados luego de algunas iteraciones y testeos de usabilidad, durante los cuales, se presentaron problemas como que los usuarios no lograban entender la funcionalidad, por lo cual, se mejoraron los bocetos para que fueron mas intuitivos.
 
    * Primera Iteracion
-   ![Pagina](readme0.jpg)
+   ![Pagina](src/images/readme/readme0.jpg)
    * Segunda Iteracion
-   ![Pagina](readme1.jpg)
-   ![Pagina](readme2.jpg)
-   ![Pagina](readme3.jpg)
-   ![Pagina](readme4.jpg)
-   ![Pagina](readme5.jpg)
+   ![Pagina](src/images/readme/readme1.jpg)
+   ![Pagina](src/images/readme/readme2.jpg)
+   ![Pagina](src/images/readme/readme3.jpg)
+   ![Pagina](src/images/readme/readme4.jpg)
+   ![Pagina](src/images/readme/readme5.jpg)
 
   ### Prototipo de Alta Fidelidad
 
   A continuacion los prototipos de alta fidelidad realizados con la herramienta **Figma** donde se aplicaron los principios de diseño visual para nuestra propuesta final.
 
-   ![Pagina](readme6_alta.png)
-   ![Pagina](readme7_alta.png)
+   ![Pagina](src/images/readme/readme6_alta.png)
+   ![Pagina](src/images/readme/readme7_alta.png)
+   ![Pagina](src/images/readme/readme8.jpg)
+ 
 
-## 5. Implementacion de la interfaz de Usuario.
-
-La implementacion de la interfaz de usuario tardo mas tiempo del planificado, al implementar los primeros springs se demoraron un tiempo mas del planificado, sin embargo, se trabajo para que el proyecto cumpliera con todas las caracteristicas solicitadas. A continuacion algunas imagenes del producto final:
-
-  ![Pagina](readme8.jpg)
-  ![Pagina](readme9.jpg)
-
-.- Muestra la data en una interfaz: una tabla.
-.- Permite al usuario interactuar para obtener la infomación que necesita: Filtra y ordena la data.
-
-  ![Pagina](readme10.jpg)
-
-## 6. Objetivos de aprendizaje
+## 5. Objetivos de aprendizaje
 
 El objetivo principal de este proyecto es que, entendiendo las necesidades de
 tus usuarios, aprendas a diseñar y construir una interfaz web donde se pueda
