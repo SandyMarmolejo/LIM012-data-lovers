@@ -56,6 +56,7 @@ btnAthletes.addEventListener('click', function () {
 
   document.getElementById('btnAthletes').classList.add('btnMenuFocus');
   document.getElementById('btnMedals').classList.remove('btnMenuFocus');
+  btnSearchAthlete.click();
 });
 
 btnMedals.addEventListener('click', function () {
@@ -64,6 +65,7 @@ btnMedals.addEventListener('click', function () {
 
   document.getElementById('btnAthletes').classList.remove('btnMenuFocus');
   document.getElementById('btnMedals').classList.add('btnMenuFocus');
+  btnSearchMedals.click();
 });
 
 btnSearchAthlete.addEventListener('click', function () {
